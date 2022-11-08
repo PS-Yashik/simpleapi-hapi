@@ -39,6 +39,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: [ci, run]
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x, 15.x]
